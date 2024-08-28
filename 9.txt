@@ -1,0 +1,25 @@
+9. Palindrome Number
+Easy
+Given an integer x, return true if x is a 
+palindrome and false otherwise;
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        int l = x;
+        if (x < 0)
+            return false;
+        int rev_no = 0;
+        int digit = 0;
+        while (x > 0) {
+            digit = x % 10;
+            x = x / 10;
+
+            if (rev_no < INT_MIN / 10 || rev_no > INT_MAX / 10) {
+                return false;
+            }
+            rev_no = rev_no * 10 + digit;
+        }
+        return (l == rev_no ? true : false);
+    }
+};
