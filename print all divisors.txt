@@ -1,0 +1,21 @@
+print all the divisors of a number
+
+the approach is:
+for 36 ;
+1 * 36      
+2 * 18
+3 * 12
+4 * 9
+6 * 6 sqrt(36)
+9 * 4.....
+
+int n ;
+vector < int > ans ;
+for(int i = 0 ; i <= sqrt(n) ; i++){
+	if(n%i==0) push_back.ans(i);
+	if(n/i != i) push_back.ans(n/i) ;      // for 6 * 6 case wrna toh all n/i are factor	
+}
+sort(ans.begin(),ans.end());
+return ans;
+
+
