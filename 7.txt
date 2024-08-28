@@ -16,9 +16,9 @@ public:
         while(x!=0){
             digit = x % 10;
             x /= 10;
-            //if(rev_no > INT_MAX/10 || rev_no < INT_MIN/10){
-            //    return 0;
-            //}
+            if(rev_no > INT_MAX/10 || rev_no < INT_MIN/10){
+                return 0;
+            }
             rev_no = rev_no * 10 + digit;
         }
         return rev_no;
